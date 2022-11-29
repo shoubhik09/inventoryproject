@@ -12,8 +12,12 @@ pool:
   vmImage: windows-latest
 
 steps:
-- task: Maven@3
+- task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'package -DskipTests'
+    mavenOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.8'
+    jdkArchitectureOption: 'x64'
     publishJUnitResults: false
+    goals: 'package'
