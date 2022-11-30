@@ -27,7 +27,7 @@ public class InventorySearchController {
 	public Product fetchProductById(@PathVariable("product-id") int productId, HttpServletRequest httpServletRequest,
 			HttpServletResponse httpServletResponse) {
 		System.out.println("fetchProductById");
-		System.out.println("fetchProductById test");
+		System.out.println("fetchProductById test test");
 		Product myProduct = null;
 		try {
 			Optional<Product> products = inventorySearchService.serachProductById(productId);
